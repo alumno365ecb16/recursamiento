@@ -4,21 +4,50 @@ $(document).ready(function(e){
 	document.addEventListener("deviceready",function(){
 		
 			$('#ingredientes').on ("touchstart", function(){
-				navigator.notification.confirm("¿Que quieres hacer?",function(opt){
-			switch(opt)
-			{
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#ingredientes2').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#ingredientes3').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#ingredientes4').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#ingredientes5').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#ingredientes6').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#ingredientes7').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#ingredientes8').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#ingredientes9').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#progreso').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
+			$('#pucha').on ("touchstart", function(){
+				navigator.notification.beep(1);
+				navigator.notification.vibrate(1000);
+			});
 			
-			case 1:
-			navigator.notification.beep(1);
-			break;
-			
-			case 2:
-			navigator.notification.vibrate(1000);
-			break;
-			}//switch opt
-				},"Practica4","Beep,Vibrar,Cancelar");//confirm
-				
-			});//barrer derecha
 			
 			
 	},false);//ready device
