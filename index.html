@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Juego de hamburguesas</title>
+<link href="jquery-mobile/jquery.mobile-1.3.2.min.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#fondo {
+	position: relative;
+	left: 1px;
+	top: 3px;
+	width: 318px;
+	height: 452px;
+	z-index: auto;
+	margin-left: auto;
+	margin-right: auto;
+	visibility: visible;
+}
+#progreso {
+	position: absolute;
+	left: 1px;
+	top: 272px;
+	width: 318px;
+	height: 182px;
+	z-index: 1;
+	visibility:hidden;
+}
+#ingredientes {
+	position: absolute;
+	left: 1px;
+	top: 109px;
+	width: 256px;
+	height: 165px;
+	z-index: 1;
+}
+
+
+#ingredientes2 {
+	position: absolute;
+	left: 0px;
+	top: 107px;
+	width: 318px;
+	height: 171px;
+	z-index: 1;
+	visibility:hidden;
+}
+#ingredientes3 {
+	position: absolute;
+	left: 0px;
+	top: 110px;
+	width: 318px;
+	height: 171px;
+	z-index: 1;
+	visibility:hidden;
+}
+#ingredientes4 {
+	position: absolute;
+	left: 1px;
+	top: 110px;
+	width: 318px;
+	height: 171px;
+	z-index: 1;
+	visibility:hidden;
+}
+#ingredientes5 {
+	position: absolute;
+	left: 1px;
+	top: 109px;
+	width: 318px;
+	height: 169px;
+	z-index: 1;
+	visibility:hidden;
+}
+#ingredientes6 {
+	position: absolute;
+	left: 2px;
+	top: 109px;
+	width: 316px;
+	height: 171px;
+	z-index: 1;
+	visibility:hidden;
+}
+#ingredientes7 {
+	position: absolute;
+	left: 1px;
+	top: 107px;
+	width: 318px;
+	height: 171px;
+	z-index: 1;
+	visibility:hidden;
+}
+#ingredientes8 {
+	position: absolute;
+	left: 2px;
+	top: 108px;
+	width: 318px;
+	height: 171px;
+	z-index: 1;
+	visibility:hidden;
+}
+#ingredientes9 {
+	position: absolute;
+	left: 2px;
+	top: 109px;
+	width: 318px;
+	height: 171px;
+	z-index: 1;
+	visibility:hidden;
+}
+#taran {
+	position: absolute;
+	left: 343px;
+	top: 119px;
+	width: 317px;
+	height: 285px;
+	z-index: 1;
+	visibility:hidden;
+}
+
+#pucha {
+	position: absolute;
+	left: 343px;
+	top: 405px;
+	width: 320px;
+	height: 60px;
+	z-index: 2;
+	visibility: hidden
+}
+</style>
+<script src="jquery-mobile/jquery-1.10.2.min.js" type="text/javascript"> </script>
+<script src="jquery-mobile/jquery.mobile-1.3.2.min.js" type="text/javascript"> </script>
+<script src="jquery-mobile/acciones.js" type="text/javascript"> </script>
+<script src="phonegap.js"></script>
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/8.jpg','imagenes/12.jpg','imagenes/16.jpg')">
+
+
+<div id="fondo" data-theme="b">
+  <div id="titulo" data-role="header">
+		<h1 align="center"> <em><strong>Harás tu<br>propia<br> hamburguesa</strong></em></h1>
+  </div>
+    
+<div align="center" id="ingredientes2" onClick="MM_showHideLayers('ingredientes2','','hide','ingredientes3','','show','progreso','','show')"><img src="imagenes/1.jpg" width="316" height="170"></div>
+
+<div align="center" id="ingredientes3" onClick="MM_showHideLayers('ingredientes3','','hide','ingredientes4','','show','progreso','','show')"><img src="imagenes/Pan.gif" width="312" height="169"></div>
+
+<div align="center" id="ingredientes4" onClick="MM_showHideLayers('ingredientes4','','hide','ingredientes5','','show')"><img src="imagenes/5.jpg" width="317" height="171"></div>
+
+<div align="center" id="ingredientes5" onClick="MM_showHideLayers('ingredientes5','','hide','ingredientes6','','show');MM_swapImage('contenedor','','imagenes/8.jpg',1)"><img src="imagenes/Carne.gif" width="319" height="170"></div>
+
+<div align="center" id="ingredientes6" onClick="MM_showHideLayers('ingredientes6','','hide','ingredientes7','','show')"><img src="imagenes/9.jpg" width="316" height="171"></div>
+
+<div align="center" id="ingredientes7" onClick="MM_showHideLayers('ingredientes7','','hide','ingredientes8','','show');MM_swapImage('contenedor','','imagenes/12.jpg',1)"><img src="imagenes/Catsup.gif" width="318" height="172"></div>
+
+<div align="center" id="ingredientes8" onClick="MM_showHideLayers('ingredientes8','','hide','ingredientes9','','show')"><img src="imagenes/13.jpg" width="318" height="171"></div>
+
+<div align="center" id="ingredientes9" onClick="MM_swapImage('contenedor','','imagenes/16.jpg',1);MM_showHideLayers('ingredientes2','','hide','ingredientes3','','hide','ingredientes4','','hide','ingredientes5','','hide','ingredientes6','','hide','ingredientes7','','hide','ingredientes8','','hide','ingredientes9','','hide','ingredientes','','hide');MM_popupMsg('Ahora toca tu hamburguesa :3')"><img src="imagenes/Mostaza.gif" width="318" height="171"></div>
+
+  <div align="center" id="ingredientes" onClick="MM_showHideLayers('ingredientes3','','show','ingredientes2','','show','ingredientes','','hide')"><img src="imagenes/inicio.jpg" width="316" height="165"></div>
+  
+  <div align="center" id="progreso" onClick="MM_showHideLayers('progreso','','hide','taran','','show','pucha','','show')"><img src="imagenes/4.jpg" name="contenedor" width="316" height="182" id="contenedor">
+  
+  </div>
+</div>
+<div id="taran"><img src="imagenes/17.jpg" width="317" height="286"></div>
+<div id="pucha" onClick="MM_showHideLayers('ingredientes2','','hide','ingredientes3','','hide','ingredientes4','','hide','ingredientes5','','hide','ingredientes6','','hide','ingredientes7','','hide','ingredientes8','','hide','ingredientes9','','hide','ingredientes','','show','progreso','','hide','taran','','hide','pucha','','hide')"><center onclick="MM_showHideLayers('progreso','','hide','taran','','hide','pucha','','hide')">Puchame :3 y volveremos a jugar</center></div>
+</body>
+</html>
