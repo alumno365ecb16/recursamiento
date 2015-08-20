@@ -3,7 +3,7 @@
 $(document).ready(function(e){
 	document.addEventListener("deviceready",function(){
 		
-			$('#ingredientes').on ("OnClick", function(){
+			$('#ingredientes').on ("touchstart", function(){
 				navigator.notification.confirm("¿Que quieres hacer?",function(opt){
 			switch(opt)
 			{
